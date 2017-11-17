@@ -1,10 +1,12 @@
 <h1>Products</h1>
 
 <ul>
-  <% @products.each do |product| %>
+  <% @products.three_most_recent.each do |product| %>
     <li><%=link_to product.name, product_path(product) %></li>
   <% end %>
 </ul>
-<%= link_to "Welcome", "/" %>
-||
+<br>
+<hr>
+
+<%= link_to "All Products", products_path %> ||
 <%= link_to "New Product", new_product_path %>
