@@ -23,12 +23,19 @@ President</h3>
   <% @products.three_most_recent.each do |product| %>
     <li><%=link_to product.name, product_path(product) %></li>
   <% end %>
+  <br>
+  <h4>Here is our product or products with the most reviews:</h4>
+  <%  @products.most_reviews.each do |product| %>
+    <li><%=link_to product.name, product_path(product) %></li>
+  <% end %>
+
 </ul>
 </h4>
 <br>
 <hr>
 <div class="well">
 <h3>
+
 <%= link_to "All Products", products_path %> ||
 <%= link_to "New Product", new_product_path %>
 </h3>
