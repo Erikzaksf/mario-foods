@@ -5,5 +5,12 @@
 <h1><%= @product.origin %></h1>
 <br>
 <hr>
+<br>
 
+<p><%= link_to "Edit", edit_product_path(@product) %></p>
+<p><%= link_to "Delete", product_path(@product),
+                         :data => {:confirm => "You sure?",
+                                   :method => "delete"} %></p>
+<br>
+<hr>
 <p><%= link_to "Return to products", products_path %></p>
