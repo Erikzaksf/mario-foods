@@ -1,12 +1,33 @@
-<h1>Products</h1>
-
+<h1>Welcome to Mario's Foods</h1>
+<h3>Every Family Has A Story. This Is Ours.
+<br>
+<br>
+It was my father’s love and passion for food that brought Mario’s to life in 1944. With a worn notebook of cherished sausage recipes preserved for generations by our family in southern Italy, Dad made it his mission to deliver products of exceptional quality, flavor and value to the customers of my grandfather’s grocery store.<br> His mission – and our commitment to fulfilling it – are at the heart of our business to this day.
+<br>
+<br>
+Through years of hard work and perseverance, Mario’s earned the respect of our industry and –more importantly – the trust of our customers. While much has changed since 1944, our passion for food and our business philosophy remain the same: Exceed our customers’ expectations by bringing them unmatched value and unparalleled service. We are dedicated to the communities we serve, committed to sustainable business practices, and focused on aligning our products and services to meet the specific needs of our customers.
+<br>
+At Mario’s, we take pride in treating every customer the same – from the smallest operator to the largest restaurant chain. We look forward to “Building on a Tradition of Service” with you as a valued partner.
+<br>
+<br>
+Welcome to the Mario family,
+<br>
+Craig Mario
+<br>
+President</h3>
+<br>
+<hr>
+<br>
 <ul>
+  <h4>Here is our three most recently added products:
   <% @products.three_most_recent.each do |product| %>
     <li><%=link_to product.name, product_path(product) %></li>
   <% end %>
 </ul>
+</h4>
 <br>
 <hr>
-
+<h3>
 <%= link_to "All Products", products_path %> ||
 <%= link_to "New Product", new_product_path %>
+</h3>
