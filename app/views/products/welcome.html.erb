@@ -1,3 +1,11 @@
+<div class="well">
+<h3>
+
+<%= link_to "All Products", products_path %> ||
+<%= link_to "New Product", new_product_path %>
+</h3>
+</div>
+
 <h1>Welcome to Mario's Foods</h1>
 <h3>Every Family Has A Story. This Is Ours.
 <br>
@@ -24,8 +32,13 @@ President</h3>
     <li><%=link_to product.name, product_path(product) %></li>
   <% end %>
   <br>
-  <h4>Here is our product or products with the most reviews:</h4>
+  Here is our product with the most reviews:
   <%  @products.most_reviews.each do |product| %>
+    <li><%=link_to product.name, product_path(product) %></li>
+  <% end %>
+  <br>
+  Here is a list of products made in the USA:
+  <%  @products.made.each do |product| %>
     <li><%=link_to product.name, product_path(product) %></li>
   <% end %>
 
@@ -33,10 +46,3 @@ President</h3>
 </h4>
 <br>
 <hr>
-<div class="well">
-<h3>
-
-<%= link_to "All Products", products_path %> ||
-<%= link_to "New Product", new_product_path %>
-</h3>
-</div>

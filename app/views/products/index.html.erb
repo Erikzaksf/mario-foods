@@ -1,13 +1,22 @@
+<h3>
+  <div class="well">
+    <%= link_to "Welcome", "/" %>
+    ||
+    <%= link_to "New Product", new_product_path %>
+  </div>
+</h3>
+
 <h1>Products</h1>
 <h3>
-<ul>
-  <% @products.each do |product| %>
-    <li><%=link_to product.name, product_path(product) %></li>
-  <% end %>
-</ul>
-<div class="well">
-<%= link_to "Welcome", "/" %>
-||
-<%= link_to "New Product", new_product_path %>
-</div>
+
+
+
+  <ul>
+    <% @products.each do |product| %>
+      <div class="panel">
+      <li><%=link_to product.name, product_path(product) %></li>
+      </div>
+    <% end %>
+  </ul>
+
 </h3>

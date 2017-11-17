@@ -7,8 +7,9 @@ class Product < ActiveRecord::Base
     .joins(:reviews)
     .group("products.id")
     .order("reviews_count DESC")
-    .limit(2)
-    )}
+    .limit(1)
+  )}
+  scope :made, -> { where(origin: "USA" )}
 
   validates :name, :presence => true
   validates :cost, :presence => true
