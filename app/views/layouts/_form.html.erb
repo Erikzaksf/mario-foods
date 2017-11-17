@@ -1,0 +1,15 @@
+<%= form_for @product do |f| %>
+  <%= f.label :name %>
+  <br>
+  <%= f.text_field :name %>
+  <br>
+  <%= f.label :cost %>
+  <br>
+  <%= f.number_field :cost, class: :text_field, step: :any %>
+  <br>
+  <%= f.label :origin %>
+  <br>
+  <%= f.text_field :origin %>
+  <br>
+  <%= f.submit  %>
+<% end %>
