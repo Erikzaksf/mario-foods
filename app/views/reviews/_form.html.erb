@@ -1,0 +1,18 @@
+<%= render('layouts/errors', :object => @review) %>
+
+<%= form_for [@product, @review] do |f| %>
+  <%= f.label :autor %>
+  <br>
+  <%= f.text_field :author %>
+  <br>
+  <%= f.label :content_body %>
+  <br>
+  <%= f.text_field :content_body %>
+  <p tyle="font-size: 11px">Must contain between 50-250 characters.</p>
+  <br>
+  <%= f.label :rating %>
+  <br>
+  <%= f.select :rating, options_for_select(0..5) %> 
+  <br>
+  <p><%= f.submit %></p>
+<% end %>
