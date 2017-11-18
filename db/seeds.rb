@@ -13,17 +13,12 @@ Review.destroy_all
 
 50.times do |index|
   Faker::UniqueGenerator.clear
-  Product.create!(name: Faker::Food.unique.dish,
+  product = Product.create!(name: Faker::Food.unique.dish,
                         cost: Faker::Number.decimal(2),
                         origin: Faker::Address.country)
-
+                      5.times { product.reviews.create!(author: Faker::Name.name,
+                                              content_body: Faker::Lorem.characters(200),
+                                              rating: Faker::Number.between(1, 5) )}
 end
 
-# 5.times do |index|
-#   Faker::UniqueGenerator.clear
-#   product = Product.all
-#         product.review.create!(author: Faker::Name.name,
-#                                     content_body: Faker::Lorem.characters(200),
-#                                     rating: Faker::Number.between(1, 5) )
-#       end
 p "Created #{Product.count}"
