@@ -9,7 +9,7 @@ class Product < ActiveRecord::Base
     .order("reviews_count DESC")
     .limit(1)
   )}
-  scope :made, -> { where(origin: "USA" )}
+  scope :made, -> { where(origin: "United States" )}
 
   validates :name, :presence => true
   validates :cost, :presence => true
