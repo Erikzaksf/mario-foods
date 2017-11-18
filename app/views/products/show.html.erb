@@ -22,6 +22,9 @@
 
   <ul>
     <% @product.reviews.each do |review| %>
+    <div class="well">
+
+
       <li>
         <h3>Author:</h3> <h4> <%= review.author %> </h4>
         <h4> <%= review.content_body %> </h4>
@@ -33,6 +36,7 @@
                                  :data => {:confirm => "Are you sure?",
                                                 :method => "delete"} %>
       </li>
+    </div>
     <% end %>
   </ul>
 <% else %>
